@@ -6,4 +6,4 @@ int main () {
     std::cout << "Type your first name:";
     std::cin >> firstName;
     std::cout << "Hello world, hello " << firstName << std::endl;
-}
+} //oh
