@@ -1,7 +1,20 @@
 #include <iostream>
-//define your functions here
-int main(int argc, char** argv) {
-  //write your code here
 
-  return 0;
+int add(int num);
+
+int add(int num) {
+    if(num != 0) {
+      return num + add(num - 1);
+    }
+    return 0;
+} 
+
+int main() {
+  int num;
+  std::cout << "Enter an Integer: ";
+  std::cin >> num;
+
+  int z = add(num);
+
+  std::cout << z << std::endl;
 }
