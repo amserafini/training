@@ -1,9 +1,37 @@
 #include <iostream>
 
-//define your functions here
+bool isPerfect(int no)
+{
+	int i = 0;
+	int sum = 0;
 
-int main(int argc, char** argv) {
-  //write your code here
+	while (i++ < no)
+	{
+		if (no % i == 0 && i < no)
+		{
+			sum += i;
+		}
+	}
+	return sum == no;
+}
 
-  return 0;
+int main()
+{
+	float first;
+	float second;
+	std::cout << "Enter the first number of the range : " << std::endl; 
+  std::cin >> first;
+	std::cout << "Enter the second number of the range : " << std::endl; 
+  std::cin >> second;
+
+	std::cout << "Perfect numbers between " << first << " and " << second << " :" << std::endl;
+	for (int i = first; i <= second; i++)
+	{
+		if (isPerfect(i))
+		{
+			std::cout << i << std::endl;
+		}
+	}
+
+	return 0;
 }
